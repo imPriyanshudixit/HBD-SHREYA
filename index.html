@@ -148,14 +148,13 @@ body{
 
 .marquee img{
   width:240px;
-  height:360px;               /* portrait ratio */
+  height:360px;
   margin-right:30px;
-  object-fit:cover;           /* keeps face centered */
-  object-position:top;        /* avoids head cut */
+  object-fit:cover;
+  object-position:top;
   border-radius:18px;
   transition:0.4s ease;
 }
-
 
 .marquee img:hover{
   transform:scale(1.08);
@@ -208,7 +207,6 @@ footer{
 
 <body>
 
-<!-- Background Music -->
 <audio id="bgMusic">
   <source src="music.mp3" type="audio/mpeg">
 </audio>
@@ -218,7 +216,8 @@ footer{
     <h1>Happy 18th Birthday 🎂</h1>
     <h2>Shreya Jain</h2>
     <p>My Sister • My Best Friend</p>
-    <p>18 January 2026</p>
+    <p>18 February 2026</p>
+
 <div class="countdown" id="countdown">
   <div><span id="days">00</span><small>Days</small></div>
   <div><span id="hours">00</span><small>Hours</small></div>
@@ -247,23 +246,19 @@ footer{
 
 <section class="gallery">
 
-  <!-- Row 1 -->
   <div class="marquee">
     <img src="images/1.jpg"><img src="images/2.jpg"><img src="images/3.jpg">
     <img src="images/4.jpg"><img src="images/5.jpg"><img src="images/6.jpg">
     <img src="images/7.jpg"><img src="images/8.jpg">
-    <!-- duplicate -->
     <img src="images/1.jpg"><img src="images/2.jpg"><img src="images/3.jpg">
     <img src="images/4.jpg"><img src="images/5.jpg"><img src="images/6.jpg">
     <img src="images/7.jpg"><img src="images/8.jpg">
   </div>
 
-  <!-- Row 2 -->
   <div class="marquee reverse">
     <img src="images/9.jpg"><img src="images/10.jpg"><img src="images/11.jpg">
     <img src="images/12.jpg"><img src="images/13.jpg"><img src="images/14.jpg">
     <img src="images/15.jpg">
-    <!-- duplicate -->
     <img src="images/9.jpg"><img src="images/10.jpg"><img src="images/11.jpg">
     <img src="images/12.jpg"><img src="images/13.jpg"><img src="images/14.jpg">
     <img src="images/15.jpg">
@@ -276,6 +271,7 @@ footer{
   <button onclick="reveal()">Click Here</button>
   <div id="wish"></div>
 </section>
+
 <div class="final-wish">
   Happy Birthday Once Again, Shreya ❤️
 </div>
@@ -283,8 +279,9 @@ footer{
 <footer>
   Wishes with intention by Priyanshu Dixit
 </footer>
+
 <script>
-const targetDate = new Date("January 18, 2026 00:00:00").getTime();
+const targetDate = new Date("February 18, 2026 00:00:00").getTime();
 
 setInterval(() => {
   const now = new Date().getTime();
@@ -303,12 +300,13 @@ setInterval(() => {
   document.getElementById("seconds").innerText = seconds;
 }, 1000);
 </script>
+
 <script>
 const bgMusic = document.getElementById("bgMusic");
 
 document.addEventListener("click", () => {
   if (bgMusic.paused) {
-    bgMusic.volume = 0.20;   // 🔊 Adjust volume here (0.0 – 1.0)
+    bgMusic.volume = 0.20;
     bgMusic.play().catch(() => {});
   }
 }, { once: true });
